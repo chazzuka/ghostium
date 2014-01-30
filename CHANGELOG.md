@@ -1,3 +1,13 @@
+<a name="v2.0.2"></a>
+### v2.0.2 (2014-01-30)
+
+
+#### Bug Fixes
+
+* Add bundler install as npm install postinstall cmd ([e7e3c2d9](http://github.com/oswaldoacauan/ghostium/commit/e7e3c2d9875b7f98a7505c2d0e2fbc13dd9c945e))
+* **bower:** Fix Prism issue dependencie. Rel #27, #33 ([f6aba3ef](http://github.com/oswaldoacauan/ghostium/commit/f6aba3efa4de5cf1a20213edfe997a5f8b45d398))
+* **templates:** Fix express-hbs 404 issue introduced with Ghost 0.4. See #47 ([ce92314c](http://github.com/oswaldoacauan/ghostium/commit/ce92314c0a5576f3c84134db27ba009cc066580a))
+
 <a name="v2.0.1"></a>
 ### v2.0.1 (2014-01-27)
 
