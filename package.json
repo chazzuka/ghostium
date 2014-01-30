@@ -43,7 +43,10 @@
     "grunt-usemin": "~2.0.0",
     "grunt-push-release": "~0.1.1",
     "grunt-conventional-changelog": "~1.0.0",
-    "grunt-csso": "~0.5.0"
+     "grunt-csso": "~0.5.0",
+     "js-yaml": "~3.0.1",
+     "whet.extend": "~0.9.9",
+     "sax": "~0.6.0"
   },
   "engines": {
     "node": ">=0.10.0"
