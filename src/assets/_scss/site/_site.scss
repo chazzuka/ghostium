@@ -1,17 +1,10 @@
 .profile-wrapper {
-  text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
-  h1, h2, h3, strong {
-    font-weight: normal;
-  }
-  h2, h3 {
-    text-transform: uppercase;
-  }
-  h3,strong {
+
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+
+  strong, em {
     border-bottom: 1px dashed $line-breaks-color;
-  }
-  h3 {
-    padding: 10px 0;
-    margin: 15px 0;
+    font-weight: normal;
   }
 
   .profile-cover {
@@ -20,33 +13,171 @@
       float:left;
       margin-right: 20px;
     }
-    h2 {
-      padding-top: 10px;
-      font-weight: normal;
-    }
   }
   .emp {
-    li { margin: 10px; }
-    .emp-date {
+    li {
+      margin: 10px;
+    }
+    small {
       display: block;
     }
-    .emp-role {
-      border-bottom: 1px dashed $line-breaks-color;
-    }
-    .emp-org {
-      border-bottom: 1px dashed $line-breaks-color;
+  }
+
+  ul.tags {
+    margin: 0; padding: 0;
+    li {
+      float: left;
     }
   }
 }
 
-ul.tags {
-  margin: 0; padding: 0;
-  li {
-    float: left;
-    display: inline-block;
-    padding: 3px 10px;
-    margin: 0 5px 5px 0;
-    border-radius: 20px;
-    border:solid 1px $line-breaks-color;
+.rtag {
+  display: inline-block;
+  padding: 3px 10px;
+  margin: 0 5px 5px 0;
+  border-radius: 20px;
+  border:solid 1px $muted-text-color;
+}
+
+.f3d a {
+  color: $text-color;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  perspective: 600px;
+
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:hover span {
+    background: $primary-color;
+    -webkit-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+    -moz-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+    -ms-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+    transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+  }
+
+  span {
+    display: block;
+    position: relative;
+    padding: 0 3px;
+
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    transition: all 400ms ease;
+
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    &:after {
+      content: attr(data-title);
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0 3px;
+      color: $drawer-text-color;
+      background: $primary-color;
+      text-shadow: none !important;
+      -webkit-transform-origin: 50% 0%;
+      -moz-transform-origin: 50% 0%;
+      -ms-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+      -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+      -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+      -ms-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+      transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+    }
+  }
+}
+
+.cover {
+  background-color: $cover-background-color;
+}
+
+
+h1, .h1 {
+  padding: 24px 0;
+  margin: 12px 0;
+
+  @include breakpoint(small) {
+    padding: 15px 0;
+    margin: 8px 0;
+  }
+}
+
+h2, .h2 {
+  padding: 15px 0;
+  margin: 8px 0;
+
+  @include breakpoint(small) {
+    padding: 12px 0;
+    margin: 6px 0;
+  }
+}
+
+h3, .h3 {
+  padding: 13px 0;
+  margin: 7px 0;
+
+  @include breakpoint(small) {
+    padding: 10px 0;
+    margin: 5px 0;
+  }
+}
+
+h4, .h4 {
+  padding: 11px 0;
+  margin: 6px 0;
+
+  @include breakpoint(small) {
+    padding: 9px 0;
+    margin: 5px 0;
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: 400;
+  color: $primary-color;
+}
+
+.cover-container {
+  text-align: center;
+  .cover-title {
+    color: $background-color;
+    margin: 0;
+    padding: 0;
+    font-family: 'Mystery Quest', cursive;
+    font-size: 60px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8);
+  }
+  .cover-description {
+    margin: 0 0 20px;
+    padding: 0;
+    color: $background-color;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8);
   }
 }
