@@ -1,0 +1,48 @@
+.profile-wrapper {
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+  h1, h2, h3, strong {
+    font-weight: normal;
+  }
+  h2, h3 {
+    text-transform: uppercase;
+  }
+  h3,strong {
+    border-bottom: 1px dashed $line-breaks-color;
+  }
+
+  .profile-cover {
+    margin-bottom: 25px;
+    .cover-logo {
+      float:left;
+      margin-right: 20px;
+    }
+    h2 {
+      padding-top: 10px;
+      font-weight: normal;
+    }
+  }
+  .emp {
+    li { margin: 10px; }
+    .emp-date {
+      display: block;
+    }
+    .emp-role {
+      border-bottom: 1px dashed $line-breaks-color;
+    }
+    .emp-org {
+      border-bottom: 1px dashed $line-breaks-color;
+    }
+  }
+}
+
+ul.tags {
+  margin: 0; padding: 0;
+  li {
+    float: left;
+    display: inline-block;
+    padding: 3px 10px;
+    margin: 0 5px 5px 0;
+    border-radius: 20px;
+    border:solid 1px $line-breaks-color;
+  }
+}
