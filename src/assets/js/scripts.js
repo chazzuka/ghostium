@@ -39,6 +39,18 @@
 
     _prismHandler();
 
+    // Share screen between blog and profile
+    // =================
+    $window.hashchange( function(){
+      var $profileWrapper = $('.profile-wrapper');
+      var $blogWrapper = $('.blog-wrapper');
+      if (location.hash == '#blog' && $profileWrapper.length) {
+        $profileWrapper.addClass('inactive');
+        $blogWrapper.removeClass('inactive');
+      }
+    });
+    $window.hashchange();
+
     // PJax bindings
     // =================
     if ($.support.pjax) {
@@ -69,6 +81,8 @@
         $('[data-load-image]', $content).each(function() {
           ImageLoader.load($(this));
         });
+
+        $(window).hashchange();
 
         _prismHandler();
         NProgress.done();

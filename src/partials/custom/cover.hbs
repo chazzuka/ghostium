@@ -1,5 +1,3 @@
-{{!< default}}
-
 <aside role="banner" class="cover">
     <div {{#if @blog.cover}}data-load-image="{{@blog.cover}}"{{/if}} class="cover-image"></div>
     <div class="cover-container">
@@ -12,20 +10,3 @@
         <p class="cover-description">{{@blog.description}}</p>
     </div>
 </aside>
-
-<section class="wrapper">
-    <div class="wrapper-container">
-
-        <section class="post-list">
-            {{#foreach posts}}
-                {{> post/list this}}
-            {{/foreach}}
-        </section>
-
-        {{#if pagination}}
-            {{pagination}}
-        {{/if}}
-
-        {{> footer this}}
-    </div>
-</section>

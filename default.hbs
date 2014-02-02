@@ -32,7 +32,7 @@
     <link href="//fonts.googleapis.com/css?family=Mystery+Quest|Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
 
-      <link rel="stylesheet" href="/assets/css/d910537c.main.min.css"/>
+      <link rel="stylesheet" href="/assets/css/c66d32a9.main.min.css"/>
 
     <script src="/assets/js/60f7a8a0.head-scripts.min.js"></script>
 
@@ -46,16 +46,20 @@
     <main id="container" role="main" class="container">
       <div class="surface">
         <div class="surface-container">
-          <div data-pjax-container class="content">
-            {{{body}}}
-          </div>
+              {{> custom/cover this}}
+              <section class="wrapper">
+                  <div class="wrapper-container">
+                      <div data-pjax-container class="content">{{{body}}}</div>
+                      {{> footer this}}
+                  </div>
+              </section>
         </div>
       </div>
     </main>
 
     {{ghost_foot}}
 
-    <script src="/assets/js/0dee047f.foot-scripts.min.js"></script>
+    <script src="/assets/js/a5cd67c5.foot-scripts.min.js"></script>
 
     <script type="text/javascript">
       {{> custom/config}}
@@ -66,13 +70,14 @@
       t.src='//www.google-analytics.com/analytics.js';
       z.parentNode.insertBefore(t,z)}(window,document,'script','ga'));
       ga('create',ga_ua);ga('send','pageview');
-
+    {{!
       (function () {
       var s = document.createElement('script'); s.async = true;
       s.type = 'text/javascript';
       s.src = '//' + disqus_shortname + '.disqus.com/count.js';
       (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
       }());
+    }}
     </script>
   </body>
 </html>

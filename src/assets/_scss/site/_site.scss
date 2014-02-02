@@ -1,3 +1,5 @@
+.inactive { display: none; }
+
 .profile-wrapper {
 
   text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
@@ -190,12 +192,5 @@ h6, .h6 {
 .post-item-meta-item {
   &:before {
     content: '';
-  }
-}
-
-.post-footer {
-  display: none;
-  @include breakpoint(medium) {
-    display: block;
   }
 }
