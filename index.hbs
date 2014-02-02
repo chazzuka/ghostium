@@ -3,14 +3,12 @@
 {{> custom/profile this}}
 
 <div class="blog-wrapper inactive" id="blog">
-    <h2>Latest Articles</h2>
-
+    <h1>Blog Entries</h1>
     <section class="post-list">
         {{#foreach posts}}
             {{> post/list this}}
         {{/foreach}}
     </section>
-
     {{#if pagination}}
         {{pagination}}
     {{/if}}
